@@ -35,7 +35,7 @@ button{
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        flex-basis: 1300px;
+        flex-basis: 90vw;
         margin: 5px 10px;
     }
 
@@ -78,7 +78,7 @@ div.description{
 div.description-card{
     margin: 25px 10px;
     display: flex;
-    flex-basis: 1300px;
+    flex-basis: 90vw;
     justify-content: space-between;
     gap: 100px;
 }
@@ -149,16 +149,23 @@ button.signup{
 
 
 /* quote-section */
-div.quote{
+div.quote-section{
     display: flex;
     justify-content: center;
-    align-content: center;
     background-color: #e5e7eb;
     color: #1f2937;
 }
 
 div.quote-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
     flex-basis: 840px;
+    gap: 100px;
+
+    margin: 25px 10px;
+
     font-size: 36px;
     font-style: italic;
     font-weight: 40;
@@ -166,6 +173,7 @@ div.quote-card{
 
 div.quote-author{
     font-weight: bolder;
+    text-align: right;
 }
 
 
@@ -178,7 +186,7 @@ div.signup{
 
 div.signup-card{
     display: flex;
-    flex-basis: 1300px;
+    flex-basis: 90vw;
     justify-content: space-between;
     box-sizing: border-box;
 
