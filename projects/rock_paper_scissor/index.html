@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function getComputerChoice(){
+            n = Math.floor(Math.random() * 3)+1;
+            if(n==1){
+                return "rock";
+            }
+            else if(n==2){
+                return "paper";
+            }
+            else{
+                return "scissor";
+            }
+        }
+
+        function getHumanChoice(){
+            let choice = prompt("choose any 1 choice\n1.rock\n2.paper\n3.scissor","rock");
+            choice = String(choice).toLowerCase();
+            return choice;
+        }
+        
+        function playRound(round =1,humanChoice,computerChoice,H_score,C_score){
+            
+            if(humanChoice==computerChoice){
+                console.log("Draw!,play again");
+            }
+            
+            else if( (humanChoice == "rock" && computerChoice == "scissor" )||
+            (humanChoice == "paper" && computerChoice =="rock" )||
+            (humanChoice == "scissor" && computerChoice =="paper")){
+                H_score++;
+                console.log(`Player won! ${humanChoice} beats ${computerChoice}`);
+            }
+            else{
+                C_score++;
+                console.log(`Computer won! ${computerChoice} beats ${humanChoice}`);
+            }
+            console.log(`round ${round}\n humanscore : ${H_score}  Computerscore : ${C_score}`)
+            return [H_score,C_score];
+        }
+        
+        function playRockPaperScissor(no_of_rounds){
+            let round = 1
+            let humanScore = 0;
+            let computerScore = 0;   
+            while(humanScore<no_of_rounds && computerScore < no_of_rounds){
+                [humanScore,computerScore] = playRound(round,getHumanChoice(),getComputerChoice(),humanScore,computerScore);
+                round++
+            }
+            if(humanScore==no_of_rounds) console.log("player won");
+            else console.log("computer won");
+        }
+        
+        
+        
+        
+        
+
+    </script>
+</head>
+<body>
+    <h3>Rock paper scissor game</h3>
+</body>
+</html>
