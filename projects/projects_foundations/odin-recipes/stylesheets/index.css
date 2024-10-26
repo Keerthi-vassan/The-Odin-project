@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+
+*{
+    background-color: beige;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 1000;
+    font-style: normal;
+}
+
+ul{
+    background-color: rgb(243, 243, 227);
+}
