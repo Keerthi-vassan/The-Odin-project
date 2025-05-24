@@ -1,0 +1,60 @@
+/* page setup */
+
+body,.page{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    /* align-items: center; */
+    margin: 0;
+    padding: 0;
+    gap: 50px;
+    
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: aqua;
+    background-color: #0d1117;
+}
+
+.white_text{
+    color: whitesmoke;
+}
+
+
+
+/* page */
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    gap: 15px;
+}
+
+.UI,.result{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.human,.computer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    align-items: center;
+}
+
+.button_area,.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    gap: 15px;
+    width: 200px;
+}
+
+button{
+    width: 100px;
+}
